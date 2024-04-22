@@ -23,7 +23,7 @@ if [[ -n "$TARGETS" ]]; then
 else
     if [[ -n "$PATH_TO_FLAKE_DIRS" ]]; then
         for dir in $PATH_TO_FLAKE_DIRS; do
-            nix "${options[@]}" flake update --commit-lock-file --commit-lockfile-summary "$COMMIT_MSG" "$dir"
+            nix "${options[@]}" flake update --commit-lock-file --commit-lockfile-summary "$COMMIT_MSG" --flake "$dir"
         done
     else
         nix "${options[@]}" flake update --commit-lock-file --commit-lockfile-summary "$COMMIT_MSG"
