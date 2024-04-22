@@ -135,7 +135,7 @@ jobs:
         uses: DeterminateSystems/update-flake-lock@vX
         with:
           inputs: input1 input2 input3
-          path-to-flake-dir: 'nix/' # in this example our flake doesn't sit at the root of the repository, it sits under 'nix/flake.nix'
+          path-to-flake-dirs: ./sub-flake1 ./sub-flake2 # in this example our flake doesn't sit at the root of the repository, it sits under './sub-flake1/flake.nix' and './sub-flake2/flake.nix'
 ```
 
 ## Example using a different Git user
