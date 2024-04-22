@@ -15,4 +15,4 @@ if [[ -n "$PATH_TO_FLAKE_DIRS" ]]; then
     done
 fi
 
-nix "${options[@]}" flake update "$TARGETS" --commit-lock-file --commit-lockfile-summary "$COMMIT_MSG" "${flake_dirs[@]}"
+nix "${options[@]}" flake update --commit-lock-file --commit-lockfile-summary "$COMMIT_MSG" "${flake_dirs[@]}"
